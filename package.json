@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nightwatch": "^0.9.21"
+    "nightwatch": "^1.0.9"
   }
 }

@@ -7,7 +7,7 @@
     "globals_path" : "",
   
     "selenium" : {
-      "start_process" : true,
+      "start_process" : false,
       "server_path" : "",
       "log_path" : "bin/selenium-server-standalone-3.9.1.jar",
       "port" : 4444,
