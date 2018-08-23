@@ -1,5 +1,24 @@
+var homeCommands = {
+    loadHome: function() {
+        return this.navigate()
+        .waitForElementVisible('body', 1000)   
+    },
+    setZoneSelector: function(zoneName) {
+        return this.section.zoneSelector.waitForElementVisible('@zoneSelectorDestination', 1000)
+        .setValue('@zoneSelectorDestination', zoneName);
+    },
+    clickFirstResult: function() {
+        return this.section.zoneSelector
+        .waitForElementVisible('@firstResult', 2000, () => this.section.zoneSelector.click('@firstResult'))
+    },
+    clickSearch: function() {
+        return this.section.search.click('@searchButton');
+    }
+}
+
 module.exports = {
     url: 'https://www.demojuniper.com',
+    commands: [homeCommands],
     sections: {
         search: {
             selector: '#hotel-searcher',
